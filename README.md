@@ -16,7 +16,7 @@
 
 ## About The Project
 
-![Dev finace](.github/dev-finance.png)
+![Dev finances](.github/dev-finances.png)
 
 A responsive website, in which you can control incomes and expenses visually.
 It uses localStorage to save in the browser.
