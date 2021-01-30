@@ -62,5 +62,5 @@ Project Link: [https://github.com/LucFerSan/dev-finances-discover](https://githu
 
 ### Special thanks to
 
-[Mayk Brito](https://github.com/maykbrito)
-[Rocketseat](https://github.com/Rocketseat)
+- [Mayk Brito](https://github.com/maykbrito)
+- [Rocketseat](https://github.com/Rocketseat)
