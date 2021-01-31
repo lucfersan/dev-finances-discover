@@ -26,10 +26,15 @@ const Transaction = {
     App.reload();
   },
 
-  remove(index) {
-    this.all.splice(index, 1);
+  remove(event, index) {
+    const confirmation = confirm('Deseja mesmo deletar?');
 
-    App.reload();
+    if (!confirmation) {
+      event.preventDefault();
+    } else {
+      this.all.splice(index, 1);
+      App.reload();
+    }
   },
 
   incomes() {
@@ -104,7 +109,7 @@ const DOM = {
       <td class="${amountClassCSS}">${amount}</td>
       <td class="date">${transaction.date}</td>
       <td>
-        <img class="remove-transaction" onclick="Transaction.remove(${index})" src="../assets/minus.svg" alt="Remover transação" />
+        <img class="remove-transaction" onclick="Transaction.remove(event, ${index})" src="../assets/minus.svg" alt="Remover transação" />
       </td>
     `;
 
