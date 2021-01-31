@@ -71,6 +71,18 @@ const DOM = {
     document.getElementById('total-display').innerHTML = Utils.formatCurrency(
       Transaction.total(),
     );
+
+    this.handleTotalClass();
+  },
+
+  handleTotalClass() {
+    const totalContainer = document.getElementById('total-container');
+
+    if (Transaction.total() < 0) {
+      totalContainer.classList.add('negative');
+    } else {
+      totalContainer.classList.remove('negative');
+    }
   },
 
   tbody: document.querySelector('#data-table tbody'),

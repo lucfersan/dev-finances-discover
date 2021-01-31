@@ -16,7 +16,7 @@
 
 ## About The Project
 
-![Dev finances](.github/dev-finances.png)
+![Dev finances](.github/negative-total.png)
 
 A responsive website, in which you can control incomes and expenses visually.
 

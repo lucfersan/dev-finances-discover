@@ -3,6 +3,7 @@
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
+  --negative-red: #d42121;
 }
 
 * {
@@ -147,6 +148,10 @@ button:hover {
 .card.total {
   color: #fff;
   background-color: var(--green);
+}
+
+.card.total.negative {
+  background-color: var(--negative-red);
 }
 
 /* Table */
