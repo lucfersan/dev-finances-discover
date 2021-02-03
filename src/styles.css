@@ -1,23 +1,61 @@
 :root {
+  --color-background: #f0f2f5;
+  --color-white: #fff;
   --dark-blue: #363f5f;
   --green: #49aa26;
   --light-green: #3dd705;
+  --header-green: #2d4a22;
+  --income-green: #12a454;
   --red: #e92929;
   --negative-red: #d42121;
+  --data-table-blue: #969cb3;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
 }
 
 html {
   font-size: 93.75%;
 }
 
-body {
-  background-color: #f0f2f5;
+.content-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+/* Dark mode */
+#darkmode-toggle {
+  display: none;
+}
+
+#darkmode-toggle:checked + .content-wrapper {
+  /* Dark mode */
+  --color-background: #1a1a2e;
+  --dark-blue: #c9c0a0;
+  --data-table-blue: #69634c;
+  --color-white: #16213e;
+  --header-green: #141414;
+  --negative-red: #b91530;
+  --green: #0e12f3;
+  --light-green: #2569bd;
+}
+
+.darkmode-label {
+  cursor: pointer;
+  color: var(--color-white);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.darkmode-label:hover {
+  opacity: 0.8;
 }
 
 body,
@@ -45,13 +83,13 @@ input {
 
 /* Header */
 header {
-  background-color: #2d4a22;
+  background-color: var(--header-green);
   padding: 2rem 0 10rem;
   text-align: center;
 }
 
 header h1 {
-  color: #fff;
+  color: var(--color-white);
   font-weight: 100;
 }
 
@@ -68,7 +106,7 @@ h2 {
 }
 
 #balance h2 {
-  color: #fff;
+  color: var(--color-white);
   margin-top: 0;
 }
 
@@ -124,7 +162,7 @@ button:hover {
 
 /* Card */
 .card {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
@@ -146,7 +184,7 @@ button:hover {
 }
 
 .card.total {
-  color: #fff;
+  color: var(--color-white);
   background-color: var(--green);
 }
 
@@ -164,7 +202,7 @@ button:hover {
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969cb3;
+  color: var(--data-table-blue);
 }
 
 table thead tr th:first-child,
@@ -178,7 +216,7 @@ table tbody tr td:last-child {
 }
 
 table th {
-  background-color: #fff;
+  background-color: var(--color-white);
   font-weight: 400;
   padding: 1rem 2rem;
   text-align: left;
@@ -186,7 +224,7 @@ table th {
 }
 
 table td {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 1rem 2rem;
 }
 
@@ -203,7 +241,7 @@ td.description {
 }
 
 td.income {
-  color: #12a454;
+  color: var(--income-green);
 }
 
 td.expense {
@@ -236,7 +274,7 @@ td.expense {
 }
 
 .modal {
-  background-color: #f0f2f5;
+  background-color: var(--color-background);
   padding: 2.4rem;
   width: min(90vw, 500px);
 }
@@ -251,6 +289,7 @@ td.expense {
 }
 
 .input-group {
+  background-color: var(--color-background);
   margin-top: 0.8rem;
 }
 
@@ -267,6 +306,7 @@ input:focus {
 }
 
 .input-group small {
+  color: var(--dark-blue);
   opacity: 0.6;
 }
 

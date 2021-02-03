@@ -10,115 +10,121 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="./app.js" defer></script>
   </head>
   <body>
-    <header>
-      <img src="../assets/logo.svg" alt="Logo Dev Finance" />
-    </header>
+    <label class="darkmode-label" for="darkmode-toggle">Darkmode</label>
+    <input type="checkbox" id="darkmode-toggle" />
 
-    <main class="container">
-      <section id="balance">
-        <h2 class="sr-only">Balanço</h2>
+    <div class="content-wrapper">
+      <header>
+        <img src="../assets/logo.svg" alt="Logo Dev Finance" />
+      </header>
 
-        <div class="card">
-          <h3>
-            <span>Entradas</span>
-            <img src="../assets/income.svg" alt="Imagem de entradas" />
-          </h3>
-          <p id="income-display"></p>
-        </div>
-        <div class="card">
-          <h3>
-            <span>Saídas</span>
-            <img src="../assets/expense.svg" alt="Imagem de saídas" />
-          </h3>
-          <p id="expense-display"></p>
-        </div>
-        <div class="card total" id="total-container">
-          <h3>
-            <span>Total</span>
-            <img src="../assets/total.svg" alt="Imagem do total" />
-          </h3>
-          <p id="total-display"></p>
-        </div>
-      </section>
+      <main class="container">
+        <section id="balance">
+          <h2 class="sr-only">Balanço</h2>
 
-      <section id="transaction">
-        <h2 class="sr-only">Transações</h2>
+          <div class="card">
+            <h3>
+              <span>Entradas</span>
+              <img src="../assets/income.svg" alt="Imagem de entradas" />
+            </h3>
+            <p id="income-display"></p>
+          </div>
+          <div class="card">
+            <h3>
+              <span>Saídas</span>
+              <img src="../assets/expense.svg" alt="Imagem de saídas" />
+            </h3>
+            <p id="expense-display"></p>
+          </div>
+          <div class="card total" id="total-container">
+            <h3>
+              <span>Total</span>
+              <img src="../assets/total.svg" alt="Imagem do total" />
+            </h3>
+            <p id="total-display"></p>
+          </div>
+        </section>
 
-        <a href="#" class="button new" onclick="Modal.toggle()"
-          >+ Nova Transação</a
-        >
+        <section id="transaction">
+          <h2 class="sr-only">Transações</h2>
 
-        <table id="data-table">
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
-              <th></th>
-            </tr>
-          </thead>
+          <a href="#" class="button new" onclick="Modal.toggle()"
+            >+ Nova Transação</a
+          >
 
-          <tbody></tbody>
-        </table>
-      </section>
-    </main>
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th></th>
+              </tr>
+            </thead>
 
-    <div class="modal-overlay">
-      <div class="modal">
-        <div class="modal-content">
-          <h2>Nova Transação</h2>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
 
-          <form action="" onsubmit="Form.submit(event)">
-            <div class="input-group">
-              <label for="description" class="sr-only">Descrição</label>
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="modal-content">
+            <h2>Nova Transação</h2>
 
-              <input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="Descrição"
-              />
-            </div>
+            <form action="" onsubmit="Form.submit(event)">
+              <div class="input-group">
+                <label for="description" class="sr-only">Descrição</label>
 
-            <div class="input-group">
-              <label for="amount" class="sr-only">Valor</label>
+                <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Descrição"
+                />
+              </div>
 
-              <input
-                type="number"
-                name="amount"
-                id="amount"
-                placeholder="0,00"
-                step="0.01"
-              />
+              <div class="input-group">
+                <label for="amount" class="sr-only">Valor</label>
 
-              <small
-                >Use o sinal - (negativo) para despesas e , (vírgula) para casas
-                decimais</small
-              >
-            </div>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder="0,00"
+                  step="0.01"
+                />
 
-            <div class="input-group">
-              <label for="date" class="sr-only">Data</label>
+                <small
+                  >Use o sinal - (negativo) para despesas e , (vírgula) para
+                  casas decimais</small
+                >
+              </div>
 
-              <input type="date" name="date" id="date" />
-            </div>
+              <div class="input-group">
+                <label for="date" class="sr-only">Data</label>
 
-            <div class="input-group actions">
-              <a href="#" class="button cancel" onclick="Modal.toggle()"
-                >Cancelar</a
-              >
-              <button>Salvar</button>
-            </div>
-          </form>
+                <input type="date" name="date" id="date" />
+              </div>
+
+              <div class="input-group actions">
+                <a href="#" class="button cancel" onclick="Modal.toggle()"
+                  >Cancelar</a
+                >
+                <button>Salvar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
-    <footer>
-      <p>2021 - dev.finance$</p>
-    </footer>
+      <footer>
+        <p>2021 - dev.finance$</p>
+      </footer>
+
+      <script src="./app.js"></script>
+    </div>
   </body>
 </html>
