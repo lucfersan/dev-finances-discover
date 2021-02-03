@@ -16,7 +16,7 @@
 
 ## About The Project
 
-![Dev finances](.github/negative-total.png)
+![Dev finances](.github/dashboard-dark.png)
 
 A responsive website, in which you can control incomes and expenses visually.
 
@@ -36,7 +36,12 @@ A responsive website, in which you can control incomes and expenses visually.
 ## Usage
 
 <p float="left">
-  <img src=".github/dev-finances.png" width="390" />
+  <img src=".github/dashboard-dark.png" width="390" />
+  <img src=".github/dashboard.png" width="390" /> 
+</p>
+
+<p float="left">
+  <img src=".github/modal-dark.png" width="390" />
   <img src=".github/modal.png" width="390" /> 
 </p>
 
