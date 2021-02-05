@@ -32,8 +32,7 @@ html {
   display: none;
 }
 
-#darkmode-toggle:checked + .content-wrapper {
-  /* Dark mode */
+.content-wrapper.dark-mode-active {
   --color-background: #1a1a2e;
   --dark-blue: #c9c0a0;
   --data-table-blue: #69634c;
@@ -46,16 +45,31 @@ html {
 
 .darkmode-label {
   cursor: pointer;
-  color: var(--color-white);
+  background-color: var(--color-background);
   position: absolute;
   top: 30px;
   left: 30px;
   font-size: 20px;
   font-weight: 400;
+  height: 26px;
+  width: 50px;
+  border-radius: 1rem;
+  padding: 5px;
 }
 
-.darkmode-label:hover {
-  opacity: 0.8;
+.darkmode-label .ball {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #1a1a2e;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+
+#darkmode-toggle:checked + .darkmode-label .ball {
+  transform: translateX(24px);
 }
 
 body,

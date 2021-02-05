@@ -1,3 +1,10 @@
+const input = document.getElementById('darkmode-toggle');
+
+input.addEventListener('change', () => {
+  const darkModeContainer = document.querySelector('.content-wrapper');
+  darkModeContainer.classList.toggle('dark-mode-active');
+});
+
 const Modal = {
   toggle() {
     const modalOverlay = document.querySelector('.modal-overlay');
