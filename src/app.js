@@ -13,12 +13,32 @@ input.addEventListener('change', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const darkmode = localStorage.getItem('darkmode');
+  const label = document.querySelector('.darkmode-label');
 
+  let labelContent = '';
+
+  // Changes the order of the icons according to the darkmode on start
   if (darkmode === 'active') {
     document
       .querySelector('.content-wrapper')
       .classList.add('dark-mode-active');
+
+    labelContent = `
+      <img src="../assets/sun.png" alt="Sun icon" />
+      <img src="../assets/moon.svg" alt="Moon icon" />
+      <div class="ball"></div>
+    `;
+  } else {
+    labelContent = `
+      <img src="../assets/moon.svg" alt="Moon icon" />
+      <img src="../assets/sun.png" alt="Sun icon" />
+      <div class="ball"></div>
+    `;
   }
+
+  const div = document.createElement('div');
+  div.innerHTML = labelContent;
+  label.appendChild(div);
 });
 
 const Modal = {

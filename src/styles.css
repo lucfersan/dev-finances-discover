@@ -55,21 +55,34 @@ html {
   width: 50px;
   border-radius: 1rem;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-label div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-label img {
+  width: 50%;
 }
 
 .darkmode-label .ball {
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
   background-color: #1a1a2e;
   border-radius: 50%;
-  top: 2px;
-  left: 2px;
+  top: 1.5px;
+  left: 1.5px;
   transition: transform 0.2s linear;
 }
 
 #darkmode-toggle:checked + .darkmode-label .ball {
-  transform: translateX(24px);
+  transform: translateX(23px);
 }
 
 body,
