@@ -51,7 +51,7 @@ html {
   left: 30px;
   font-size: 20px;
   font-weight: 400;
-  height: 26px;
+  height: 28px;
   width: 50px;
   border-radius: 1rem;
   padding: 5px;
@@ -76,13 +76,13 @@ html {
   height: 23px;
   background-color: #1a1a2e;
   border-radius: 50%;
-  top: 1.5px;
-  left: 1.5px;
+  top: 2.5px;
+  left: 2.5px;
   transition: transform 0.2s linear;
 }
 
 #darkmode-toggle:checked + .darkmode-label .ball {
-  transform: translateX(23px);
+  transform: translateX(21px);
 }
 
 body,
