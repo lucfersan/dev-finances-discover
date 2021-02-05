@@ -3,6 +3,22 @@ const input = document.getElementById('darkmode-toggle');
 input.addEventListener('change', () => {
   const darkModeContainer = document.querySelector('.content-wrapper');
   darkModeContainer.classList.toggle('dark-mode-active');
+
+  if (darkModeContainer.classList.contains('dark-mode-active')) {
+    localStorage.setItem('darkmode', 'active');
+  } else {
+    localStorage.setItem('darkmode', '');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkmode = localStorage.getItem('darkmode');
+
+  if (darkmode === 'active') {
+    document
+      .querySelector('.content-wrapper')
+      .classList.add('dark-mode-active');
+  }
 });
 
 const Modal = {
