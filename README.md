@@ -63,7 +63,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Lucas Fernandes - fernandes.lucas11@outlook.com
 
-Project Link: [https://github.com/LucFerSan/dev-finances-discover](https://github.com/LucFerSan/dev-finances-discover)
+Project Link - live view: [https://devfinances-lucas.netlify.app/](https://devfinances-lucas.netlify.app/)
 
 ### Special thanks to
 
